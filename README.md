@@ -93,10 +93,12 @@ Link for installation : [Click here](https://chromedriver.chromium.org/downloads
 
 ## PriceData.csv
 This file stores stock prices against their current time instant , for every company the user wants to track.
+![Screenshot (220)](https://user-images.githubusercontent.com/75406889/124955387-a240a980-e034-11eb-851f-f657c0c8810a.png)
+
 
 ## PricePlotter.py
 This file plots the real time stocks price against their current time instant. This helps to visulaize how the stock price varies for a company , that gives better insight to the trader who wants to invest in that company.
-![Screenshot (205)](https://user-images.githubusercontent.com/75406889/124605334-6c12f680-de89-11eb-8ce6-3c6c110ca589.png)
+![Screenshot (218)](https://user-images.githubusercontent.com/75406889/124953776-0e221280-e033-11eb-880e-42be02498dff.png)
 
 
 <!-- CONTRIBUTING 
