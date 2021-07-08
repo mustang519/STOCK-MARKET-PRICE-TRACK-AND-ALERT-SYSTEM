@@ -35,8 +35,7 @@
 
 
   <p align="center">
-    This is a useful stock market tracker system , where you can monitor the stock prices and set up the threshold values for various companies depending on which 
-    you can buy or sell stocks. !!!!! 
+    This is a useful stock market price tracker system , where you can monitor the stock prices and set up the threshold values of various companies where you want to trade stocks. !!!!! 
   </p>
 </p>
 
@@ -53,6 +52,12 @@
       <a href="#pricetrackerpy">PriceTracker.py</a>
     </li>
     <li>
+      <a href="#chrome-web-driver">Chrome Web Driver</a>
+    </li>
+    <li>
+      <a href="#pricedatacsv">PriceData.csv</a>
+    </li>
+    <li>
       <a href="#priceplotterpy">PricePlotter.py</a>
     </li>
     <!--
@@ -66,12 +71,28 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a python based stock market price monitoring system that tracks the price variation of various companies , and sends alert to the user when the price falls below or exceeds a certain threshold. This system can be extremely useful to a trader who wants to buy or sell stocks.
+This is a python based stock market price monitoring system that tracks the price variation of various companies with real time and archives the data in a **.csv** file. There is also an **email notification system** that immediately sends an alert to the user when the price falls below or exceeds a certain threshold , depending on whether the user wants to buy or sell stocks. This system can be useful for a stock market trader to monitor price fluctuation of various companies and invest in the stocks. 
 
 <!--PriceTracker.py-->
-## PriceTracker.py
-This is a python code to extract real time stock price data from Yahoo Finance using Selenium and BeautifulSoup libraries . Firstly the user is required to give the code of the companies to track and a threshold value. Then depending on whether the trader wants to buy or sell stocks , if the current stock price falls below the threshold price (when he wants to buy stocks ) or the current stock price exceeds the threshold price (when he wants to sell stocks) , an email notification is sent to the trader's gmail account. This is achieved using the smptlib and ssl libraries.
+## PriceTracker.py 
+- This is a python code to extract real time stock price data from  [Yahoo Finance](https://in.finance.yahoo.com/) by web scrapping with Selenium and BeautifulSoup libraries .
+- Firstly the user is required to give the code of the companies to track and a threshold value. All this information for each company (stock price at that time instant) gets saved in a .csv file.
+- Then depending on whether the trader wants to buy or sell stocks , if the current stock price falls below the threshold price (when he wants to buy stocks ) or the current stock price exceeds the threshold price (when he wants to sell stocks) , an email notification is sent to the trader's gmail account. This is achieved using the smptlib and ssl libraries.
+- Libraries used :-
+    - **BeautifulSoup** - web scraper to scrape data out of Yahoo Finance HTML file.
+    - **html5lib** - web parser to parses the html content of the web page into meaningful blocks.
+    - **Selenium** - scrapes dynamically generated web page.
+    - **smptlib** -  defines a SMTP client session object to send mails to any internet machine with SMTP or ESMTP listener daemon.
+    - **ssl** - protocol to encrypt/secure connection between machines. Create an unencrypted connection and upgrade it to an encrypted one.
+    - **datetime** - gets the current time when the stock price data is being scraped.
 ![Screenshot (204)](https://user-images.githubusercontent.com/75406889/124605333-6c12f680-de89-11eb-8105-c9a813c7e44a.png)
+
+## Chrome Web Driver
+This is required by Selenium framework to interact with the web browser or a remote web server through a wire protocol. Here chrome web driver is used.
+Link for installation : [Click here](https://chromedriver.chromium.org/downloads).
+
+## PriceData.csv
+This file stores stock prices against their current time instant , for every company the user wants to track.
 
 ## PricePlotter.py
 This file plots the real time stocks price against their current time instant. This helps to visulaize how the stock price varies for a company , that gives better insight to the trader who wants to invest in that company.
