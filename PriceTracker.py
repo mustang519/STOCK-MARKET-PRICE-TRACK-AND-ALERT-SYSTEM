@@ -60,11 +60,11 @@ def send_email(indx) :
         adv2 = "sell"
     message = "Good news, Trader! The price for " + CODE[indx] + " has " + adv1 + str(bound[indx]) + ". You may " + adv2 + " this stock now."
 
-    # Try to log in to server and send email
+    # Try to log in to server and send email. Exception Handling is done here as we are trying to create an unencrypted connection and upgrade it to an encrypted one.
     try:
-        server = smtplib.SMTP(smtp_server, port)
+        server = smtplib.SMTP(smtp_server, port)    #server object
         server.ehlo()  # Can be omitted
-        server.starttls(context=context)  # Secure the connection
+        server.starttls(context=context)  # Secure and upgrade the connection
         server.ehlo()  # Can be omitted
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
