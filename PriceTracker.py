@@ -13,7 +13,7 @@ def stockPrice(s):
 
     url = "https://finance.yahoo.com/quote/" + s + "?p=" + s + "&guccounter=1&guce_referrer=aHR0cHM6Ly93d3cueW91dHViZS5jb20v&guce_referrer_sig=AQAAANyE07Gd730Uia9-wwV0Kvv1cWBrcVkFOydNDjjy3Db7Zzu81yNlcbXKyXUs_IVWyrwxEASQVjAUjXF8eNRB5eruYnFcq4LFvtt9Tw3ugQvfyik3cngJaGAX1KaeEYL8Yo-yW45wEjGOxUtxixvol6KKBYhfdFowq9seIYw2vfxG"
 
-    driver = webdriver.Chrome(r"C:\Users\Astha Bhatiwara\Dropbox\My PC (LAPTOP-6H818V0V)\Desktop\chromedriver.exe")
+    driver = webdriver.Chrome(r"C:\Users\Arundhuti Naskar\Dropbox\My PC (LAPTOP-6H818V0V)\Desktop\chromedriver.exe")
     driver.get(url)
 
     # this is just to ensure that the page is loaded
